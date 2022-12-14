@@ -13,7 +13,7 @@ variable "resource_group_name" {
     type = string    
 }
 
-variable "vnet_cidr" {
+variable "address_space" {
     description = "A valid CIDR."
     type = string    
 }
