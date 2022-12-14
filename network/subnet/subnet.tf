@@ -1,9 +1,9 @@
 resource "azurerm_subnet" "envSubnets" {
-  //for_each = zipmap(local.subnet_names, cidrsubnets(data.azurerm_virtual_network.srcVnet.address_space[0], 2, 2, 2))
+  
   name                 = var.name
-  resource_group_name  = var.vnet_resource_group
-  virtual_network_name = var.vnet_name
-  address_prefixes     = [var.snet_cidr]
+  resource_group_name  = var.resource_group_name
+  virtual_network_name = var.virtual_network_name
+  address_prefixes     = [var.address_prefixes]
   service_endpoints    = [
     "Microsoft.AzureActiveDirectory",
     "Microsoft.ContainerRegistry",
