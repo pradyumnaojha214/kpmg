@@ -25,7 +25,6 @@ resource "azurerm_lb_backend_address_pool" "public" {
 
 resource "azurerm_lb_outbound_rule" "public" {
   name                    = "${var.name}-OutboundRule"
-  resource_group_name     = var.name
   loadbalancer_id         = azurerm_lb.public.id
   protocol                = var.protocol//"Tcp"
   backend_address_pool_id = azurerm_lb_backend_address_pool.public.id
