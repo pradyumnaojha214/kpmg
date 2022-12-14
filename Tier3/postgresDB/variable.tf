@@ -33,7 +33,7 @@ variable "sku_name" {
     type = string    
 }
 
-variable "version" {
+variable "Version" {
     description = "version of db"
     type = string    
 }
@@ -64,12 +64,22 @@ variable "ssl_enforcement_enabled" {
     type = bool    
 }
 
-variable "minimal_tls_version" {
-    description = "minimal_tls_version of db"
-    type = bool    
+variable "resource_group_name" {
+    description = "resource group name for resource."
+    type = string    
+}
+
+variable "ssl_minimal_tls_version_enforced" {
+    description = "ssl_minimal_tls_version_enforced of db"
+    type = string    
 }
 
 variable "storage_mb" {
     description = "storage_mb of db"
-    type = bool    
+    type = number    
+}
+
+variable "subnet_id" {
+    description = "subnet_id of db"
+    type = string    
 }
