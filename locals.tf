@@ -9,7 +9,12 @@ locals {
     id       = azurerm_resource_group.rg1.id
   }
 
-  vnet_cidr = ["10.0.1.0/24"]
+  address_space = "10.1.1.0/25"
+  address_prefixes = "10.1.1.130/26"
+  allocation_method = "Static"
+  sku = "Standard"
+  protocol = "Tcp"
+
 
   tags = "test"
   }
