@@ -1,9 +1,9 @@
-variable "vnet_name" {
+variable "virtual_network_name" {
     description = "Name of target VNET for subnets being added."
     type = string
 }
 
-variable "vnet_resource_group" {
+variable "resource_group_name" {
     description = "Resource group of target VNET for subnets being added."
     type = string
 }
@@ -13,7 +13,7 @@ variable "name" {
     type = string
 }
 
-variable "snet_cidr" {
+variable "address_prefixes" {
     description = "A valid CIDR for subnet"
     type = string
 }
