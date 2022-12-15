@@ -59,7 +59,6 @@ variable "Version" {
     type = string
 }
 
-
 variable "create_option" {
     description = "create_option of resource"
     type = string
