@@ -27,3 +27,13 @@ variable "protocol" {
     description = "protocol for out bound"
     type = string    
 }
+
+variable "virtual_network_id" {
+    description = "virtual_network_id for azurerm_lb_backend_address_pool_address"
+    type = string    
+}
+
+variable "ip_address" {
+    description = "ip_address for azurerm_lb_backend_address_pool_address"
+    type = string    
+}
