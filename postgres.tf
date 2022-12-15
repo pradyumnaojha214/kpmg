@@ -3,8 +3,8 @@ module postgre-db{
     name = "postgres"
     location = local.resource_obj.location
     resource_group_name = local.resource_obj.name
-    administrator_login = "admin"
-    administrator_login_password = "keep-secret-through-keyvault"
+    administrator_login = "Adam"
+    administrator_login_password = "keep-secret-through-keyvault@214"
     sku_name = "GP_Gen5_4"
     Version = "11"
     backup_retention_days = "7"

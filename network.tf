@@ -10,7 +10,7 @@ module app-vnet{
 module app-subnet{
     source               = "./network/subnet"
     name                 = "subnet-app"
-    resource_group_name  = local.resource_obj.location
+    resource_group_name  = local.resource_obj.name
     virtual_network_name = "vnet-app"
     address_prefixes     = local.address_prefixes
 }

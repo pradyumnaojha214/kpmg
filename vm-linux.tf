@@ -12,19 +12,28 @@ locals {
 }
 
 
-module vm-linux{
+module vm-linux {
     source              = "./Tier2/vm"
     name = "web-vm"
     resource_group_name = local.resource_obj.name
     location = local.resource_obj.location
     size = local.size
     admin_username = "admin"
-    Storage_account_type = local.Storage_account_type
+    storage_account_type = local.Storage_account_type
     create_option = local.create_option
     disk_size_gb = local.disk_size_gb
     lun = local.lun
+    
     caching = local.caching
-    source_image_reference = local.source_image_reference
-    os_disk = local.os_disk
+    //source_image_reference = local.source_image_reference
+    //os_disk = local.os_disk
+    private_ip_address_allocation = local.private_ip_address_allocation
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "16.04-LTS"
+    Version   = "latest"
+    Storage_account_type = "StandardSSD_LRS"
+    subnet_id = local.subnet_id
 
+    
 }
